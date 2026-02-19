@@ -100,26 +100,13 @@ DELETE http://localhost:8083/api/products/1
 ```
 **Response (204 No Content)**
 
-## 🗄️ Database Setup
-
-### 1. Install PostgreSQL
-Download and install from [postgresql.org](https://www.postgresql.org/download/)
-
-### 2. Create Database
-```bash
-psql -U postgres
-```
-Then run:
-```sql
-CREATE DATABASE question4_ecommerce_db;
-```
 
 ### 3. Configure Application
 Update `src/main/resources/application.properties`:
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/question4_ecommerce_db
 spring.datasource.username=postgres
-spring.datasource.password=YOUR_PASSWORD
+spring.datasource.password=123
 ```
 
 ### 4. Database Schema
@@ -136,14 +123,6 @@ CREATE TABLE products (
 );
 ```
 
-## 🚀 Running the Application
-
-### Prerequisites
-- Java 21 or higher
-- Maven 3.6+
-- PostgreSQL 13+
-
-### Steps
 
 1. **Clone the repository**
 ```bash
@@ -152,7 +131,7 @@ cd RestfulAPI_ecommerce_CRUD_25487
 ```
 
 2. **Configure database**
-Update `application.properties` with your PostgreSQL credentials
+Updated `application.properties` with my PostgreSQL credentials
 
 3. **Build the project**
 ```bash
@@ -166,31 +145,6 @@ mvn spring-boot:run
 
 The application will start on `http://localhost:8083`
 
-## 📁 Project Structure
-
-```
-src/main/java/auca/ac/rw/question4_library_api/
-├── Controller/
-│   └── ecommerce/
-│       └── ProductController.java
-├── Model/
-│   └── ecommerce/
-│       └── Product.java
-├── Repository/
-│   └── ecommerce/
-│       └── ProductRepository.java
-├── Service/
-│   └── ecommerce/
-│       └── ProductService.java
-└── Question4LibraryApiApplication.java
-```
-
-## 🧪 Testing
-
-Use tools like:
-- **Postman** - Import the endpoints and test
-- **cURL** - Command-line testing
-- **Thunder Client** (VS Code extension)
 
 ## 👤 Author
 
